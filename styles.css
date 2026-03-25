@@ -1,0 +1,268 @@
+:root {
+  --primary: #9e1e1e;
+  --white: #ffffff;
+  --text: #1f1f1f;
+  --soft: #f9f4f4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.5;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.site-header {
+  background: var(--primary);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  gap: 1rem;
+}
+
+.logo {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.site-nav a {
+  color: var(--white);
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--white);
+  color: var(--white);
+  border-radius: 6px;
+  padding: 0.35rem 0.55rem;
+}
+
+.hero {
+  background: linear-gradient(160deg, var(--primary), #7f1717);
+  color: var(--white);
+  padding: 5rem 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  margin: 0.7rem 0 1rem;
+}
+
+.tag {
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  opacity: 0.95;
+}
+
+.lead {
+  margin-bottom: 1.2rem;
+  max-width: 60ch;
+}
+
+.hero-card,
+.card,
+.contact-form {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.hero-card {
+  color: var(--text);
+}
+
+.small {
+  font-size: 0.9rem;
+}
+
+.price {
+  font-size: 1.8rem;
+  color: var(--primary);
+  font-weight: 700;
+  margin: 0.35rem 0 0.8rem;
+}
+
+.section {
+  padding: 3.5rem 0;
+}
+
+.cards {
+  margin-top: 1.3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.services-grid {
+  align-items: stretch;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card .btn {
+  margin-top: auto;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 0.65rem 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: var(--white);
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.btn-secondary {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.contact-list {
+  list-style: none;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.contact-form {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.65rem;
+  border-radius: 8px;
+  border: 1px solid #d4d4d4;
+  font-family: inherit;
+}
+
+.site-footer {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.footer-wrap {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: fadeUp 0.7s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-grid,
+  .cards,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 64px;
+    right: 4%;
+    background: var(--primary);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    padding: 0.8rem;
+    flex-direction: column;
+    min-width: 150px;
+  }
+
+  .site-nav.open {
+    display: flex;
+  }
+}

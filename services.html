@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retouche Express | Services</title>
+  <meta name="description" content="Services et tarifs test de Retouche Express." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html">Retouche Express</a>
+      <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+      <nav class="site-nav">
+        <a href="index.html">Accueil</a>
+        <a class="active" href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section reveal">
+      <div class="container">
+        <h1>Nos services</h1>
+        <p class="lead">Tarifs indicatifs prototype (fictifs) pour test d’interface.</p>
+
+        <div class="cards services-grid">
+          <article class="card service-card">
+            <h2>Ourlet pantalon</h2>
+            <p>Ajustement longueur avec finition simple.</p>
+            <p class="price">12€</p>
+            <button class="btn btn-secondary pay-btn" data-service="Ourlet pantalon" data-price="12">Payer à distance (test)</button>
+          </article>
+
+          <article class="card service-card">
+            <h2>Ajustement robe</h2>
+            <p>Reprise légère à la taille ou aux bretelles.</p>
+            <p class="price">24€</p>
+            <button class="btn btn-secondary pay-btn" data-service="Ajustement robe" data-price="24">Payer à distance (test)</button>
+          </article>
+
+          <article class="card service-card">
+            <h2>Réparation zip</h2>
+            <p>Remplacement ou réparation sur veste/sac.</p>
+            <p class="price">18€</p>
+            <button class="btn btn-secondary pay-btn" data-service="Réparation zip" data-price="18">Payer à distance (test)</button>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© 2026 Retouche Express</p>
+      <p>Site prototype de démonstration</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
