@@ -39,9 +39,16 @@ body {
 }
 
 .logo {
-  color: var(--white);
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
-  font-weight: 700;
+}
+
+.logo img {
+  display: block;
+  height: 56px;
+  width: auto;
+  max-width: 100%;
 }
 
 .site-nav {
@@ -245,6 +252,10 @@ h1 {
 }
 
 @media (max-width: 640px) {
+  .logo img {
+    height: 42px;
+  }
+
   .menu-toggle {
     display: block;
   }
